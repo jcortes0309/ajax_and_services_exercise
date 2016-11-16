@@ -9,7 +9,6 @@
   </head>
   <body ng-app="movie-database" ng-controller="MainController">
     <button ng-click="nowPlaying()">Movies Playing Now</button>
-    <!-- {{ api_results.results[0].original_title }} -->
     <br>
     <div>
       <ul>
@@ -26,10 +25,6 @@
         <li><b>Release date:</b> {{movie_details.release_date }} </li>
         <li><b>Website:</b> {{ movie_details.homepage }} </li>
       </ul>
-      <p>
-
-      </p>
-      <label>{{ movie_details }}</label>
     </div>
   </body>
 </html>

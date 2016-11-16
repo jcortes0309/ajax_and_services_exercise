@@ -25,13 +25,11 @@ app.factory("MovieService", function($http) {
   return service;
 });
 
-// app.factor("")
 
 app.controller("MainController", function($scope, MovieService) {
   $scope.nowPlaying = function() {
     MovieService.nowPlaying().success(function(movieResults) {
       // movie results
-      // $scope.titles = [];
       console.log("Movie results: ", movieResults);
       $scope.api_results = movieResults;
       $scope.results = $scope.api_results.results;
@@ -43,19 +41,8 @@ app.controller("MainController", function($scope, MovieService) {
     MovieService.movieDetails(movieID).success(function(movieDetails) {
       // movie details
       $scope.api_results = movieDetails;
-      // console.log($scope.api_results);
       $scope.movie_details = $scope.api_results;
-      // console.log("Clicked the movie details button");
     });
   };
 
 });
-
-// app.config(function($stateProvider, $urlRouterProvider) {
-//   $stateProvider
-//     .state({
-//       name: "home",
-//       url: "/",
-//       templateUrl: ""
-//     });
-// });
